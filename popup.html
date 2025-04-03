@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extension</title>
+    <style>
+        .popup {
+            min-width: 344px;
+            min-height: 188px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        
+        .button {
+            width: 4rem;
+            height: 2rem;
+            position: relative;
+            border-radius: 20px;
+            background-color: rgb(189, 239, 239);
+            transition: 1s;
+            cursor: pointer;
+        }
+        .half {
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .circle {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-color: rgb(232, 133, 27);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: 1s;
+        }
+        @keyframes transformtoblue {
+            0% {
+                background-color: rgb(232, 133, 27);
+            }
+            100% {
+                background-color: rgb(189, 239, 239);
+            }
+        }
+        @keyframes transformtoyellow {
+            0% {
+                background-color: rgb(189, 239, 239);
+            }
+            100% {
+                background-color: rgb(189, 239, 239);
+            }
+        }
+        @keyframes movecircleRight {
+            0% {
+                left: 0;
+                background-color: rgb(232, 133, 27);
+                transform: translateX(0);
+            }
+            100% {
+                left: 100%;
+                background-color: rgb(232, 133, 27);
+                transform: translateX(100%);
+            }
+        }
+        @keyframes movecircleLeft {
+            0% {
+                left: 100%;
+                background-color: rgb(232, 133, 27);
+                transform: translateX(100%);
+            }
+            100% {
+                left: 0;
+                background-color: rgb(232, 133, 27);
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h1 class="yellow" style="text-align: center; color: rgb(255, 132, 0);font-size: 2rem;">Appearence</h1>
+        <p style="font-size: 1.2rem;">This chrome extension allows you to have a dark mode and light mode appearence for your websites. Don't believe me then let's try it :)</p>
+        <div class="button">
+            <div class="half" style="left: 5px;">On</div>
+            <div class="half" style="right: 5px; text-align: right;">Off</div>
+            <div class="circle"></div>
+        </div>
+        
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "My Chrome Extension",
+    "description": "Provide appearance for dark mode and light mode on any web page",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js" 
+    },
+    "action": {
+        "default_title": "Appearance",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ]
+}
